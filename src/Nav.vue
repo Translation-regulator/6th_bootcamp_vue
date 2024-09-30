@@ -1,0 +1,61 @@
+<script setup>
+        // 定義 emit 事件，用於通知父组件更新 visibleSection
+        let emit = defineEmits(['updateSection']);
+
+        function changeSection(section) {
+            emit('updateSection', section);  // 觸發事件，通知父组件更新 visibleSection
+        }
+
+       
+</script>
+
+<template>
+  <div class="list">
+    <nav class="item" 
+         @click="changeSection('CV')">個人簡歷</nav>
+    <nav class="item" 
+         @click="changeSection('AboutMe')">關於我</nav>
+    <nav class="item" 
+         @click="changeSection('Plan')">生涯規劃</nav>
+    <nav class="item" 
+         @click="changeSection('Share')">事件分享</nav>
+    </div>
+
+</template>
+
+<style scoped>
+    .list{
+        display: flex;
+        justify-content: center;
+        border-bottom-style:solid ;
+        margin-bottom: 15px;
+        padding: 10px;
+
+
+    }
+    .item{
+        width: 150px;
+        margin: 10px;
+        background-color: rgb(250, 140, 5);
+        text-align: center;
+        border-radius: 10px;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 1s ease, box-shadow 0.5s ease;
+
+    }
+
+    .item:hover {
+        background-color: rgb(17, 13, 238);
+        color: white;
+
+    }
+
+    .item:active {
+        box-shadow: 5px 5px rgb(171, 170, 169);
+        font-weight: bold;
+    }
+
+
+    
+</style>
