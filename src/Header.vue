@@ -17,10 +17,45 @@
     }
 
     h1.desktop {
-        display: none;
+        display: block;
     }
 
     h1.mobile {
-        display: block;
+        display: none;
+    }
+
+    /* 電腦版 */
+    @media (min-width: 1025px) {
+        h1.desktop {
+            display: block;
+        }
+        
+        h1.mobile {
+            display: none;
+        }
+    }
+
+    /* 平板版 */
+    @media (min-width: 768px) and (max-width: 1024px) {
+        h1.desktop {
+            display: none;
+        }
+
+        h1.mobile {
+            display: block;
+            font-size: 40px;
+        }
+    }
+
+    /* 手機版 */
+    @media (max-width: 767px) {
+        h1.desktop {
+            display: none;
+        }
+
+        h1.mobile {
+            display: block;
+            font-size: 30px;
+        }
     }
 </style>

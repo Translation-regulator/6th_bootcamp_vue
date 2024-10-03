@@ -7,53 +7,46 @@
 
 <template>
     <main class="InnerContent">
-    <div v-if="props.visibleSection === 'CV'">
-        
-        <div class="descript">
-            <div style="display: flex; justify-content: space-between;">
-                <div style="align-self: flex-start;">
-                    <div class="subtitle">基本資料</div>
+        <div v-if="props.visibleSection === 'CV'">
+            <div class="descript">
+                
+                <div class="profile-section">
+                    <div>
+                        <div class="subtitle">基本資料</div>
                         姓名：張兆丞<br/>
                         性別：男<br/>
                         年齡：27<br/>
                         居住地：新北市蘆洲區<br/>
-                </div>
-                <div style="align-self: flex-end;">
-                    <img src="./asset/head.jpg" style="width: 150px;">
-                </div>
-            </div>
-
-            <div style="display: flex; justify-content: space-between;">
-                <div>
-                    <div class="subtitle">學歷</div>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>碩士</td>
-                                <td>國立台灣大學生物化學暨分子生物學所</td>
-                            </tr>
-                            <tr>
-                                <td>學士</td>
-                                <td>國立嘉義大學生化科技學系</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="subtitle" style="padding-top: 5px;">職業</div>
-                    國立陽明交通大學基因體科學研究所
-                    專任研究助理
-                    <div class="subtitle">工作內容</div>
-                    細胞實驗、動物實驗以及資料分析<br/>
-                </div>
-
-                <div>
-                    <div style="align-self: flex-end;">
-                        <img src="./asset/diploma.jpg" style="width: 400px;">
                     </div>
-                </div>
+                    <img src="./asset/head.jpg" alt="头像" />
+                </div><br/>
+
+              
+                <div class="education-section">
+                    <div>
+                        <div class="subtitle">學歷</div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>碩士</td>
+                                    <td>國立台灣大學生物化學暨分子生物學所</td>
+                                </tr>
+                                <tr>
+                                    <td>學士</td>
+                                    <td>國立嘉義大學生化科技學系</td>
+                                </tr>
+                            </tbody>
+                        </table><br/>
+                        <div class="subtitle" style="padding-top: 5px;">職業</div>
+                        <div>國立陽明交通大學基因體科學研究所專任研究助理</div><br/>
+                        <div class="subtitle">工作內容</div>
+                        <div>細胞實驗、動物實驗以及資料分析</div><br/>
+                    </div>
+                    <img src="./asset/diploma.jpg" alt="畢業證書" />
             </div>
 
             <div class="subtitle">申請Bootcamp的契機</div>
-            2024年6月份接手以R語言做生物性資料分析，過程中對於寫程式產生興趣，進而開始閱覽彭彭老師的頻道，越做越有信心，也越來越有興趣，在工作上也有利用python寫解讀JSON格式的程式，將JSON資料進行重點抓取並轉移成csv檔。<br/>
+            <div>2024年6月份接手以R語言做生物性資料分析，過程中對於寫程式產生興趣，進而開始閱覽彭彭老師的頻道，越做越有信心，也越來越有興趣，在工作上也有利用python寫解讀JSON格式的程式，將JSON資料進行重點抓取並轉移成csv檔。</div><br/>
             
             <div class="subtitle">參加訓練營的規劃</div>
 
@@ -127,10 +120,9 @@
 </template>
 
 <style scoped>
-    .content{
+    .content {
         display: flex;
         flex-wrap: wrap;
-
     }
 
     table, th, td {
@@ -138,26 +130,111 @@
         border-collapse: collapse;
     }
 
-    .InnerContent{
-        flex:none; width: 60%;
+    .InnerContent {
+        flex: none;
+        width: 60%;
         padding: 3%;
-        
     }
-    .title{
+
+    .title {
         font-weight: bold;
         font-size: 28px;
     }
 
-    .descript{
-        font-size: 20px;
-        font-family: 'Times New Roman', serif,'DFKai-sb', sans-serif;
-        line-height: 40px;
-        text-align: justify; /** 使文字左右對齊 **/
-    }
-    .subtitle{
+    .descript {
         font-size: 24px;
+        font-family: 'Times New Roman', serif, 'DFKai-sb', sans-serif;
+        line-height: 40px;
+        text-align: justify;
+    }
+
+    .subtitle {
+        font-size: 26px;
         font-weight: bold;
         text-decoration: underline;
         margin-bottom: 5px;
     }
+
+    .profile-section, .education-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .profile-section img, .education-section img {
+        width: 150px;
+    }
+
+    .education-section img {
+        width: 400px;
+    }
+
+    /* 電腦版 */
+    @media only screen and (min-width: 1024px) {
+        .InnerContent {
+            width: 60%;
+        }
+    }
+
+    /* 平板版 */
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        .InnerContent {
+            width: 80%;
+        }
+
+        .title, .subtitle {
+            font-size: 24px;
+        }
+
+        .descript {
+            font-size: 22px;
+            line-height: 36px;
+        }
+    }
+
+    /* 手機版 */
+    @media only screen and (max-width: 767px) {
+        .InnerContent {
+            width: 95%;
+            padding: 5%;
+        }
+
+        .title {
+            font-size: 20px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+        }
+
+        .descript {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        /* 將大頭照移至基本资料上方 */
+        .profile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-section img {
+            order: -1; /* 將大頭照放在文字上方 */
+            margin-bottom: 20px;
+        }
+
+        /* 將畢業證書移至學歷下方 */
+        .education-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .education-section img {
+            margin-top: 20px;
+            width: 300px;
+        }
+    }
 </style>
+
