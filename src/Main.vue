@@ -107,9 +107,10 @@
         <div class="title">關於這份申請網頁，分享一個開發時的技術心得</div>
         
             <p class="descript">
-                首先，HTML以及CSS的技能是必備的，巢狀的網頁結構以及排版，起初覺得非常簡單，很快即可完成作品上線，直到開發時才發現設計上需要有一定的邏輯。如果巢狀結構沒有精確地使用，即使HTML容錯能力高，未來加入CSS或是JavaScript進行更深層開發容易使程式碼出現問題，除錯的困難度也會大大提升。我使用Vue.js作為前端框架，結合課程中所學，製作響應式網站，並且將網頁區塊進行分類，讓我在除錯以及維護上帶來非常大的便利性，此外，我利用CSS的Media Queries製作適合手機閱讀的版面，歡迎彭彭老師掃描下方QR code參考。最後也是最重要的技術為利用Github Pages將網頁上線，我結合VS code操作介面，順便也了解Git相關的指令，讓我在開發過程中增加許多便利性。
+                首先，HTML以及CSS的技能是必備的，巢狀的網頁結構以及排版，起初覺得非常簡單，很快即可完成作品上線，直到開發時才發現設計上需要有一定的邏輯。如果巢狀結構沒有精確地使用，即使HTML容錯能力高，未來加入CSS或是JavaScript進行更深層開發容易使程式碼出現問題，除錯的困難度也會大大提升。我使用Vue.js作為前端框架，結合課程中所學，製作響應式網站，並且將網頁區塊進行分類，讓我在除錯以及維護上帶來非常大的便利性，此外，我利用CSS的Media Queries製作適合手機閱讀的版面，歡迎彭彭老師掃描下方QR code參考。最後也是最重要的技術為利用Github Pages將網頁上線，我結合VS code操作介面，順便也了解Git相關的指令，讓我在開發過程中增加許多便利性。<br/>
+                Github 程式碼：<a href="https://github.com/Translation-regulator/6th_bootcamp_vue.git">https://github.com/Translation-regulator/6th_bootcamp_vue.git</a>
             </p>
-
+            
             <div class="QRcode"><a href="https://translation-regulator.github.io/6th_bootcamp/"><img src="./asset/Bootcamp.png"></a></div>
    
         <div class="title">如何看待自身工作和整個社會群體的連結關係？</div>
