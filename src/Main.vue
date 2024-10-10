@@ -63,7 +63,7 @@
         <p class="descript">
             主要是觀看彭彭老師在YouTube上傳的程式教學，從熱門語言Python開始學習，接著學習後端框架Flask。同時，基本介面的渲染也非常重要，因此學習了HTML和CSS，這是前端網頁呈現的必要條件。為了讓畫面更具互動性，我學習了前端語言JavaScript以及前端框架Vue.js。在開發過程中，為了解決遇到的問題，我會查閱官方文檔、工程師論壇，以及老師推薦的w3school，尋找合適的解法。<br/>
             我利用學到的Flask框架製作了一個輕量級的Python計算器，並使用HTML和CSS進行版面配置，最後用JavaScript的fetch功能來調用後端的運算邏輯，並將結果呈現在網頁上。我使用PythonAnywhere進行部署。雖然這個小工具看似簡單，但在開發過程中花費了不少時間，讓我學到了許多技巧。與過去學習不同的是，之前學的技術常常兩週後就忘記了，但這次給自己設計了一個小專案並完成它，不僅加深了記憶，也帶給了我成就感。<br/>
-            Python 計算機：<a href="https://conan.pythonanywhere.com/">https://conan.pythonanywhere.com/</a> <br/>
+            Python 計算機：<a href="https://conan.pythonanywhere.com/">https://conan.pythonanywhere.com</a><br/>
             Github 程式碼：<a href="https://github.com/Translation-regulator/Calculator.git" >https://github.com/Translation-regulator/Calculator.git</a>
 
         </p>
