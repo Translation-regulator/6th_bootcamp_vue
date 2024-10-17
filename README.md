@@ -6,7 +6,7 @@
 
 [WeHelp轉職申請網頁](https://translation-regulator.github.io/6th_bootcamp/)  
 
-[Python 計算機](https://conan.pythonanywhere.com/)  
+[Python計算機](https://conan.pythonanywhere.com/)  
 
 [Python 計算機-程式碼](https://github.com/Translation-regulator/Calculator)
 
