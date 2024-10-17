@@ -3,7 +3,7 @@ import { ref } from 'vue';
 
 // 定義 emit 事件，用於通知父组件更新 visibleSection
 let emit = defineEmits(['updateSection']);
-let activeItem = ref(''); // 追蹤當前被點擊的按鈕
+let activeItem = ref('CV'); // 追蹤當前被點擊的按鈕
 
 function changeSection(section) {
     emit('updateSection', section);  // 觸發事件，通知父组件更新 visibleSection
@@ -66,7 +66,7 @@ function changeSection(section) {
         }
 
         .item:hover {
-            background-color: rgb(11, 120, 23);
+            background-color: rgb(17, 13, 238);
             color: white;
         }
 
@@ -88,7 +88,7 @@ function changeSection(section) {
         }
 
         .item:hover {
-            background-color: rgb(11, 120, 23);
+            background-color:rgb(17, 13, 238);
             color: white;
         }
 
@@ -109,7 +109,7 @@ function changeSection(section) {
         }
 
         .item:hover {
-            background-color: rgb(11, 120, 23);
+            background-color:rgb(17, 13, 238);
             color: white;
         }
 
