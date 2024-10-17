@@ -1,37 +1,57 @@
 <script setup>
-        // 定義 emit 事件，用於通知父组件更新 visibleSection
-        let emit = defineEmits(['updateSection']);
+import { ref } from 'vue';
 
-        function changeSection(section) {
-            emit('updateSection', section);  // 觸發事件，通知父组件更新 visibleSection
-        }
+// 定義 emit 事件，用於通知父组件更新 visibleSection
+let emit = defineEmits(['updateSection']);
+let activeItem = ref(''); // 追蹤當前被點擊的按鈕
 
-       
+function changeSection(section) {
+    emit('updateSection', section);  // 觸發事件，通知父组件更新 visibleSection
+    activeItem.value = section; // 更新當前被選中的 section
+}
 </script>
 
 <template>
   <div class="list">
-    <nav class="item" 
-         @click="changeSection('CV')">個人簡歷</nav>
-    <nav class="item" 
-         @click="changeSection('AboutMe')">關於我</nav>
-    <nav class="item" 
-         @click="changeSection('Plan')">生涯規劃</nav>
-    <nav class="item" 
-         @click="changeSection('Share')">事件分享</nav>
-    </div>
-
+    <nav 
+      class="item" 
+      :class="{ active: activeItem === 'CV' }" 
+      @click="changeSection('CV')">個人簡歷</nav>
+      
+    <nav 
+      class="item" 
+      :class="{ active: activeItem === 'AboutMe' }" 
+      @click="changeSection('AboutMe')">關於我</nav>
+      
+    <nav 
+      class="item" 
+      :class="{ active: activeItem === 'Plan' }" 
+      @click="changeSection('Plan')">生涯規劃</nav>
+      
+    <nav 
+      class="item" 
+      :class="{ active: activeItem === 'Share' }" 
+      @click="changeSection('Share')">事件分享</nav>
+  </div>
 </template>
 
 <style scoped>
-    .list{
+    .list {
         display: flex;
         justify-content: center;
-        border-bottom-style:solid ;
+        border-bottom-style: solid;
         margin-bottom: 15px;
         padding: 10px;
+    }
 
+    .item {
+        transition: background-color 1s ease, box-shadow 0.2s ease;
+        cursor: pointer;
+    }
 
+    .item.active {
+        background-color: rgb(17, 13, 238); /* 被點擊後保持藍色 */
+        color: white;
     }
 
     /* 電腦版 */
@@ -43,12 +63,10 @@
             text-align: center;
             border-radius: 10px;
             font-size: 35px;
-            cursor: pointer;
-            transition: background-color 1s ease, box-shadow 0.2s ease;
         }
 
         .item:hover {
-            background-color: rgb(17, 13, 238);
+            background-color: rgb(11, 120, 23);
             color: white;
         }
 
@@ -70,7 +88,7 @@
         }
 
         .item:hover {
-            background-color: rgb(17, 13, 238);
+            background-color: rgb(11, 120, 23);
             color: white;
         }
 
@@ -91,7 +109,7 @@
         }
 
         .item:hover {
-            background-color: rgb(17, 13, 238);
+            background-color: rgb(11, 120, 23);
             color: white;
         }
 
@@ -99,5 +117,4 @@
             box-shadow: 5px 5px rgb(171, 170, 169);
         }
     }
-    
 </style>
