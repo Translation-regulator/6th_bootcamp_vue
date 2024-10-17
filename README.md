@@ -4,8 +4,10 @@
 
 ## 相關網址
 
-[WeHelp轉職申請網頁](https://translation-regulator.github.io/6th_bootcamp/) 
-[Python 計算機](https://conan.pythonanywhere.com/)
+[WeHelp轉職申請網頁](https://translation-regulator.github.io/6th_bootcamp/)  
+
+[Python 計算機](https://conan.pythonanywhere.com/)  
+
 [Python 計算機-程式碼](https://github.com/Translation-regulator/Calculator)
 
 ## 個人簡介和申請動機
